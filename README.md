@@ -28,4 +28,7 @@ Some commands/tips to remember, while muscle memory kicks in
 |---------| ----------- |
 | :so | Source lua file in current buffer / no need to exit-reload to apply changes |
 
+# Notes
+* peek markdown depends on https://github.com/wslutilities/wslu wslview for triggering browser in WSL
+
 
