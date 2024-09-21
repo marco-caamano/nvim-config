@@ -50,3 +50,9 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+
+-- toogle LSP inlay-hints
+vim.keymap.set("n","<leader>th", function()
+    vim.lsp.inlay_hint.enable(true)
+end)
+

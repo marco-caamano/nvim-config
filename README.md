@@ -9,6 +9,10 @@ Added some Lazy instead of PAC
 And added LSP support using updated resource:
 https://lsp-zero.netlify.app/v3.x/blog/theprimeagens-config-from-2022.html
 
+Look at enabling inlay hints for LSPs
+https://www.youtube.com/watch?v=DYaTzkw3zqQ&ab_channel=ElijahManor
+* Pending to enable at buffer open (currently they enable when entering INSERT mode)
+
 # Install
 
 Run:
