@@ -30,6 +30,9 @@ return {
   -- Rose Pine color theme || https://github.com/rose-pine/neovim
   { "rose-pine/neovim", name = "rose-pine" },
 
+  -- Catoouchuin || https://github.com/catppuccin/nvim
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
   -- LSP Using update config from https://lsp-zero.netlify.app/v3.x/blog/theprimeagens-config-from-2022.html
   {'neovim/nvim-lspconfig'},
   {'williamboman/mason.nvim'},
