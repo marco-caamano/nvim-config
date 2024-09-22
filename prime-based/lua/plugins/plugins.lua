@@ -68,27 +68,6 @@ return {
   -- Multiline || https://github.com/mg979/vim-visual-multi
   { 'mg979/vim-visual-multi', branch = 'master' },
 
-  -- neo-tree file explorer
-  { 'nvim-neo-tree/neo-tree.nvim',
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-        "MunifTanjim/nui.nvim",
-        "3rd/image.nvim",
-    },
-    config = function()
-        require("neo-tree").setup({
-            filesystem = {
-                filtered_items = {
-                    always_show = {
-                        ".gitignore",
-                        ".env",
-                    },
-                },
-            },
-        })
-    end,
-  },
 
 
 }
