@@ -1,5 +1,4 @@
 
-vim.g.mapleader = " "
 
 -- Quick way to bring up the Vim default folder explorer (netrw)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -53,8 +52,23 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Neo-tree
 vim.keymap.set("n", "<C-b>", "<cmd>Neotree toggle<CR>")
 
+
 -- toogle LSP inlay-hints
 vim.keymap.set("n","<leader>th", function()
     vim.lsp.inlay_hint.enable(true)
 end)
 
+-- Keybinds to make split navigation easier.
+--  Use CTRL+<hjkl> to switch between windows
+--
+--  See `:help wincmd` for a list of all window commands
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- also enable arrow keys for now
+vim.keymap.set('n', '<C-left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })

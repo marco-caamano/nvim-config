@@ -76,6 +76,18 @@ return {
         "MunifTanjim/nui.nvim",
         "3rd/image.nvim",
     },
+    config = function()
+        require("neo-tree").setup({
+            filesystem = {
+                filtered_items = {
+                    always_show = {
+                        ".gitignore",
+                        ".env",
+                    },
+                },
+            },
+        })
+    end,
   },
 
 
