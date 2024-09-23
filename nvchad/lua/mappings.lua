@@ -78,6 +78,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+-- remap theme picker to <leader>ft
+vim.keymap.set("n", "<leader>ft", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
 
 -- toogle LSP inlay-hints
 vim.keymap.set("n","<leader>th", function()
@@ -100,7 +102,7 @@ vim.keymap.set('n', '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower 
 vim.keymap.set('n', '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n','<leader>hh', function ()
-     vim.lsp.buf.hover()
+    vim.lsp.buf.hover()
 end, { desc = 'LSP hover dialog'})
 
 
