@@ -2,9 +2,11 @@ require "nvchad.options"
 
 -- add yours here!
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+local o = vim.o
+o.cursorlineopt ='both' -- to enable cursorline!
 
+-- set cursorline as underlined instead of bg higlight
+vim.api.nvim_set_hl(0, 'CursorLine', { underline = true })
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

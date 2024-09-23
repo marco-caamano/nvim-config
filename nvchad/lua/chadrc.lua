@@ -17,6 +17,9 @@ M.base46 = {
 M.ui = {
     tabufline = {
         enabled = false
+    },
+    telescope = {
+        style = "bordered",
     }
 }
 
