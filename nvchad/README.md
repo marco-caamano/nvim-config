@@ -1,9 +1,21 @@
-**This repo is supposed to used as config by NvChad users!**
+# NvChad configuration 
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+## Getting Rust LSP and DAP working
 
-# Credits
+### Starting from scratch
+Do the base NvChad install command:
+```
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+```
+As per NvChad instructions run:
+```
+:MasonInstallAll
+```
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+Then install rust-analyzer and codelldb from Mason
+```
+:MasonInstall rust-analyzer codelldb
+```
+Then the changes in this repo should enable LSP on Rust and debugging
+
+
