@@ -49,4 +49,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- set DAP breakpoint symbol to a red dot instead of B
+vim.fn.sign_define('DapBreakpoint', { text='🔴', texthl='', linehl='', numhl=''})
+
+
 
