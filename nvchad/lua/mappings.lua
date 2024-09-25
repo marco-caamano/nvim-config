@@ -105,5 +105,13 @@ vim.keymap.set('n','<leader>hh', function ()
     vim.lsp.buf.hover()
 end, { desc = 'LSP hover dialog'})
 
+-- open vertical split half screen size
+map("n", "<leader>v", function()
+  require("nvchad.term").new { pos = "vsp", size=0.5 }
+end, { desc = "terminal new vertical window" })
 
+-- cargo run on terminal
+map("n", "<leader>cr", function()
+  require("nvchad.term").new { pos = "vsp", size=0.5, cmd="cargo run", }
+end, { desc = "Execute Cargo Run on terminal" })
 
