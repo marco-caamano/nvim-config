@@ -115,6 +115,7 @@ return {
             })
             vim.cmd.colorscheme("vscode_modern")
         end,
-    }
+    },
+    { 'itspriddle/vim-shellcheck' },
 
 }
