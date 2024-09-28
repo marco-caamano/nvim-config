@@ -10,6 +10,7 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             require "configs.lspconfig"
+            require 'lspconfig'.bashls.setup{}
         end,
     },
 
@@ -97,25 +98,19 @@ return {
             ensure_installed = {
                 "vim", "lua", "vimdoc",
                 "html", "css", "rust",
+                "c", "cpp", "bash",
             },
         },
     },
 
-    { 'ThePrimeagen/vim-be-good' },
+    {
+        'ThePrimeagen/vim-be-good',
+        lazy = false,
+    },
 
     {
-        "gmr458/vscode_modern_theme.nvim",
+        'itspriddle/vim-shellcheck',
         lazy = false,
-        priority = 1000,
-        config = function()
-            require("vscode_modern").setup({
-                cursorline = true,
-                transparent_background = false,
-                nvim_tree_darker = true,
-            })
-            vim.cmd.colorscheme("vscode_modern")
-        end,
     },
-    { 'itspriddle/vim-shellcheck' },
 
 }
