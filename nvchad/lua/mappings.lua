@@ -82,9 +82,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>ft", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
 
 -- toogle LSP inlay-hints
-vim.keymap.set("n","<leader>th", function()
+vim.keymap.set("n","<leader>li", function()
     vim.lsp.inlay_hint.enable(true)
-end, {desc='Display LSP Inlay Hints'})
+end, {desc='LSP Inlay Hints'})
+
+-- LSP rename
+vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "LSP rename" })
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "LSP format"})
+vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = "LSP hover"})
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -100,10 +105,6 @@ vim.keymap.set('n', '<C-left>', '<C-w><C-h>', { desc = 'Move focus to the left w
 vim.keymap.set('n', '<C-right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
-vim.keymap.set('n','<leader>hh', function ()
-    vim.lsp.buf.hover()
-end, { desc = 'LSP hover dialog'})
 
 -- open vertical split half screen size
 map("n", "<leader>v", function()
